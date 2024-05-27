@@ -87,6 +87,7 @@ class ContatoDAO {
             return false;
         }
     }
+<<<<<<< HEAD
 
     public function  delete($id) {
         try {
@@ -100,6 +101,8 @@ class ContatoDAO {
             return false;
         }
     }
+=======
+>>>>>>> bc4585de1271735f3c47032a4a2a7cd2592cd8aa
 }
 
 ?>
