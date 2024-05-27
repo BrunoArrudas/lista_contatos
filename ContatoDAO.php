@@ -87,6 +87,22 @@ class ContatoDAO {
             return false;
         }
     }
+<<<<<<< HEAD
+
+    public function  delete($id) {
+        try {
+            $sql = "DELETE FROM contatos_info WHERE id = :id";
+            
+            $stmt = $this->db->prepare($sql);
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+            return true;
+        } catch (PDOException $e) {
+            return false;
+        }
+    }
+=======
+>>>>>>> bc4585de1271735f3c47032a4a2a7cd2592cd8aa
 }
 
 ?>

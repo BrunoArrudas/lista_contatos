@@ -27,6 +27,15 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: index.php');
         exit;
     }
+<<<<<<< HEAD
+
+    if(isset($_POST['delete']) && isset($_POST['id'])) {
+        $contatoDAO->delete($_POST['id']);
+        header('Location: index.php');
+        exit;
+    }
+=======
+>>>>>>> bc4585de1271735f3c47032a4a2a7cd2592cd8aa
 }
 ?>
 
