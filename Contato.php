@@ -32,6 +32,7 @@ class Contato {
     }
 
     
+<<<<<<< Updated upstream
 
 
 
@@ -43,3 +44,18 @@ class Contato {
 
 
 ?>
+=======
+    public function setTelefone($telefone)
+    {
+        // Verificar se o número é um telefone válido
+        $this->telefone = $telefone;
+    }
+    
+    public function setEmail($email)
+    {
+        // Verificar se um email é válido
+        $this->email = $email;
+    }
+}
+
+>>>>>>> Stashed changes

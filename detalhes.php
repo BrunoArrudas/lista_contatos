@@ -14,6 +14,34 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     }
 }
 
+<<<<<<< Updated upstream
+=======
+if($_SERVER['REQUEST_METHOD'] === 'POST') {    
+    if(isset($_POST['save'])) {
+        if (isset($_POST['id']) && !empty($_POST['id'])) {
+            $contato  = $contatoDAO->getById($_POST['id']);
+
+            $contato->setNome($_POST['nome']);
+            $contato->setTelefone($_POST['telefone']);
+            $contato->setEmail($_POST['email']);
+
+            $contatoDAO->update($contato);
+        } else {
+            $novoContato = new Contato(null, $_POST['nome'], $_POST['telefone'], $_POST['email']);
+            $contatoDAO->create($novoContato);            
+        }
+
+        header('Location: index.php');
+        exit;
+    }
+
+    if(isset($_POST['delete']) && isset($_POST['id'])) {
+        $contatoDAO->delete($_POST['id']);
+        header('Location: index.php');
+        exit;
+    }
+}
+>>>>>>> Stashed changes
 ?>
 
 

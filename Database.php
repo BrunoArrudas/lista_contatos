@@ -35,5 +35,8 @@ class Database {
     }
 }
 
+<<<<<<< Updated upstream
 
 ?>
+=======
+>>>>>>> Stashed changes
