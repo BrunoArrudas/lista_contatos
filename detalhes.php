@@ -9,11 +9,6 @@ if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
     $contato  = $contatoDAO->getById($_GET['id']);
 }
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> 645aa7fc94904755d4a1a01be4cded2ec6e281e4
 if($_SERVER['REQUEST_METHOD'] === 'POST') {    
     if(isset($_POST['save'])) {
         if (isset($_POST['id']) && !empty($_POST['id'])) {
@@ -32,24 +27,13 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: index.php');
         exit;
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 645aa7fc94904755d4a1a01be4cded2ec6e281e4
 
     if(isset($_POST['delete']) && isset($_POST['id'])) {
         $contatoDAO->delete($_POST['id']);
         header('Location: index.php');
         exit;
     }
-<<<<<<< HEAD
 }
->>>>>>> Stashed changes
-=======
-=======
->>>>>>> bc4585de1271735f3c47032a4a2a7cd2592cd8aa
-}
->>>>>>> 645aa7fc94904755d4a1a01be4cded2ec6e281e4
 ?>
 
 <!DOCTYPE html>

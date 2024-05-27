@@ -25,9 +25,6 @@ class Contato
         return $this->nome;
     }
     
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
     public function getTelefone()
     {
         return $this->telefone;
@@ -37,7 +34,6 @@ class Contato
     {
         return $this->email;
     }
->>>>>>> 645aa7fc94904755d4a1a01be4cded2ec6e281e4
 
     public function setNome($nome)
     {
@@ -57,32 +53,4 @@ class Contato
         // Verificar se um email é válido
         $this->email = $email;
     }
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-
-
-
-
-
-?>
-=======
-    public function setTelefone($telefone)
-    {
-        // Verificar se o número é um telefone válido
-        $this->telefone = $telefone;
-    }
-    
-    public function setEmail($email)
-    {
-        // Verificar se um email é válido
-        $this->email = $email;
-    }
-}
-
->>>>>>> Stashed changes
-=======
-=======
-}
->>>>>>> bc4585de1271735f3c47032a4a2a7cd2592cd8aa
->>>>>>> 645aa7fc94904755d4a1a01be4cded2ec6e281e4

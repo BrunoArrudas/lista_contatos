@@ -31,17 +31,4 @@ class Database
     public function getConnection() {
         return $this->conn;
     }
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-
-<<<<<<< Updated upstream
-
-?>
-=======
->>>>>>> Stashed changes
-=======
-=======
-}
->>>>>>> bc4585de1271735f3c47032a4a2a7cd2592cd8aa
->>>>>>> 645aa7fc94904755d4a1a01be4cded2ec6e281e4
