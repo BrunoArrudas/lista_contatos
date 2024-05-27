@@ -1,6 +1,6 @@
 <?php
-
-class Database {
+class Database
+{
     private static $instance = null;
     private $conn;
     private $host = 'localhost';
@@ -10,33 +10,38 @@ class Database {
 
     private function __construct()
     {
-        try 
-        {
+        try {
             $this->conn = new PDO("mysql:host=$this->host;dbname=$this->db", $this->user, $this->pass);
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch (PDOException $e)
-        {
+        } catch (PDOException $e) {
             echo 'Connection failed: ' . $e->getMessage();
         }
     }
-    
-    //Singleton Design Pattern
+
+    // Singleton Design Pattern
+    // https://refactoring.guru/design-patterns/singleton
     public static function getInstance()
     {
-        if(!self::$instance)
-        {
+        if (!self::$instance) {
             self::$instance = new Database();
         }
         return self::$instance;
     }
 
-    public function getConnection(){
+    public function getConnection() {
         return $this->conn;
     }
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
 
 <<<<<<< Updated upstream
 
 ?>
 =======
 >>>>>>> Stashed changes
+=======
+=======
+}
+>>>>>>> bc4585de1271735f3c47032a4a2a7cd2592cd8aa
+>>>>>>> 645aa7fc94904755d4a1a01be4cded2ec6e281e4
