@@ -53,7 +53,14 @@ if ($type === "register") {
         }
     } elseif ($type === "login") {
         //// Login de usuário
+
+
+
+
+        
     }
+
+    
 
 }
 
