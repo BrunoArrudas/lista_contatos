@@ -21,74 +21,45 @@ class Usuario
     {
         return $this->id;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> b69a4aeb44e7a6c4974b4ba01d234d1a3740dc48
     public function getNome()
     {
         return $this->nome;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> b69a4aeb44e7a6c4974b4ba01d234d1a3740dc48
     public function getSenha()
     {
         return $this->senha;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> b69a4aeb44e7a6c4974b4ba01d234d1a3740dc48
     public function getEmail()
     {
         return $this->email;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> b69a4aeb44e7a6c4974b4ba01d234d1a3740dc48
     public function getToken()
     {
         return $this->token;
     }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> b69a4aeb44e7a6c4974b4ba01d234d1a3740dc48
     public function setNome($nome)
     {
         $this->nome = $nome;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> b69a4aeb44e7a6c4974b4ba01d234d1a3740dc48
     public function setSenha($senha)
     {
         $this->senha = $senha;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> b69a4aeb44e7a6c4974b4ba01d234d1a3740dc48
     public function setEmail($email)
     {
         $this->email = $email;
     }
-<<<<<<< HEAD
 
     public function setToken($token)
     {
         $this->token = $token;
     }    
 }
-=======
-    public function setToken($token)
-    {
-        $this->token = $token;
-    }
-}
->>>>>>> b69a4aeb44e7a6c4974b4ba01d234d1a3740dc48

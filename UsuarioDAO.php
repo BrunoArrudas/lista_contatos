@@ -3,12 +3,8 @@
 require_once 'Database.php';
 require_once 'Usuario.php';
 
-<<<<<<< HEAD
 class UsuarioDAO
 {
-=======
-class UsuarioDAO{
->>>>>>> b69a4aeb44e7a6c4974b4ba01d234d1a3740dc48
     private $db;
 
     public function __construct()
@@ -19,14 +15,8 @@ class UsuarioDAO{
     public function create($usuario)
     {
         try {
-<<<<<<< HEAD
             $sql = "INSERT INTO usuario (nome, senha, email, token)
                     VALUES (:nome, :senha, :email, :token)";
-=======
-
-            $sql = "INSERT INTO usuario (nome, senha, email, token) VALUES (:nome, :senha, :email, :token)";
-            
->>>>>>> b69a4aeb44e7a6c4974b4ba01d234d1a3740dc48
             $stmt = $this->db->prepare($sql);
 
             $nome = $usuario->getNome();
@@ -40,7 +30,6 @@ class UsuarioDAO{
             $stmt->bindParam(':token', $token);
 
             $stmt->execute();
-<<<<<<< HEAD
 
             return true;
         } catch (PDOException $e) {
@@ -85,16 +74,3 @@ class UsuarioDAO{
         }
     }
 }
-=======
-            
-            return true;
-        } catch (PDOException $e){
-            return false;
-        }
-    }
-}
-
-
-
-?>
->>>>>>> b69a4aeb44e7a6c4974b4ba01d234d1a3740dc48
