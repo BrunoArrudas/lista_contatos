@@ -26,14 +26,20 @@ if ($type === "register") {
             $usuarioDAO = new UsuarioDAO();
             $success = $usuarioDAO->create($usuario);
 
-            if($success) {
-                $_SESSION['token'] = $token;
-                header('Location: index.php');
-                exit();
-            } else {
-                echo "Erro ao registrar no banco de dados!";
-                exit();
+                if(!$usuarioDAO->getByEmail($new_email)){
+
+                        if($success) {
+                            $_SESSION['token'] = $token;
+                            header('Location: index.php');
+                            exit();
+                        } else {
+                            echo "Erro ao registrar no banco de dados!";
+                            exit();
+                        }
+                } else {
+                    echo "Email ja utilizado";
             }
+            
         } else {
             echo "Senhas incompativeis!";
         }
