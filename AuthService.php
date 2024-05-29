@@ -26,14 +26,20 @@ if ($type === "register") {
             $usuarioDAO = new UsuarioDAO();
             $success = $usuarioDAO->create($usuario);
 
-            if($success) {
-                $_SESSION['token'] = $token;
-                header('Location: index.php');
-                exit();
-            } else {
-                echo "Erro ao registrar no banco de dados!";
-                exit();
+                if(!$usuarioDAO->getByEmail($new_email)){
+
+                        if($success) {
+                            $_SESSION['token'] = $token;
+                            header('Location: index.php');
+                            exit();
+                        } else {
+                            echo "Erro ao registrar no banco de dados!";
+                            exit();
+                        }
+                } else {
+                    echo "Email ja utilizado";
             }
+            
         } else {
             echo "Senhas incompativeis!";
         }
@@ -62,6 +68,16 @@ if ($type === "register") {
         exit();
     } else {    echo "Email ou Senha invalidos!";
     }
+} elseif($type === "logout"){
+  //Limpa todas as variaveis da sessão
+  $_SESSION = array();
+
+  //Destruir a sessão
+  session_destroy();
+
+  //Redirecionar para a pagina de login
+  header('Location: auth.php');
+  exit();
 }
 
 ?>
